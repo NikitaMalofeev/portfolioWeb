@@ -1,5 +1,11 @@
 body {
     background-color: var(--background-color);
+    counter-reset: title;
+}
+
+*, html {
+    // FIXME: без ! не работает плавный скрол
+    scroll-behavior: smooth !important;
 }
 
 * {

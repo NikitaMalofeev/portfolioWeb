@@ -12,16 +12,19 @@
 
     &__title {
         color: var(--theme-color);
-        font-size: var(--tsm2);
+        font-size: var(--tlarge);
         font-family: var(--fira-code);
+        font-weight: 600;
     }
-    &__subtitle {
+    &__name {
         font-size: var(--tgiant);
         font-family: var(--raleway);
         color: var(--lightest-slate);
+        margin-left: -4px;
     }
-    &__subtitl {
+    &__subtitle {
         color: var(--lightest-slate);
+        font-family: var(--raleway);
     }
     &__text{
         color: var(--slate);

@@ -7,12 +7,12 @@ import Button from "@/shared/ui/button/Button";
 const Hero: FC = () => {
   return (
     <div className={style.hero}>
-      <h1 className={style.hero__title}>Привет, меня зовут Никита Малофеев</h1>
-      <h2 className={style.hero__subtitle}>Frontend-developer</h2>
-      <h3 className={style.hero__subtitl}>
+      <h1 className={style.hero__title}>Привет, меня зовут</h1>
+      <h2 className={style.hero__name}>Никита Малофеев</h2>
+      <h3 className={style.hero__subtitle}>
         Я разработал frontend этого сайта для вас
-        используя Ts, Next, scss.module
-        добро пожаловать!
+        используя TypeScript, React, Next.js, scss.module.
+        <br />Добро пожаловать!
       </h3>
       <p className={style.hero__text}>
         Ниже вы можете немного лучше узнать меня, посмотреть на портфолио и подробнее узнать о задачах которые я решал на коммерческих, благотворительных и учебных проектах
