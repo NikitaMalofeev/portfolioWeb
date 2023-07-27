@@ -5,6 +5,10 @@ import { motion } from "framer-motion";
 import style from "./contact.module.scss";
 
 const Contact: FC = () => {
+
+  const test = () => {
+    console.log("test");
+  }
   return (
     <motion.div
       className={style.contact}
@@ -27,7 +31,7 @@ const Contact: FC = () => {
         привнесу эти навыки в ваш проект, предлагая эффективные решения.
       </p>
       <div className={style.contact__cta}>
-        <Button text="Match" link="" />
+        <Button text="Match" link="" onClick={test}/>
       </div>
     </motion.div>
   );
