@@ -87,7 +87,7 @@ const NavBar: FC = () => {
               delay: 0.6,
             }}
           >
-            <Button text="Resume" link="http://localhost:3000/resume.pdf" />
+            <Button text="Resume" link="http://localhost:3000/resume.pdf" onClick={test} />
           </motion.div>
         </div>
       </div>
