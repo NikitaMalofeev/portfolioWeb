@@ -6,6 +6,11 @@ import Button from "@/shared/ui/button/Button";
 import { motion } from "framer-motion";
 
 const Hero: FC = () => {
+
+const test = () => {
+  console.log("test");
+}
+
   return (
     <div className={style.hero}>
       <motion.h1
@@ -71,7 +76,7 @@ const Hero: FC = () => {
           delay: 1.65,
         }}
       >
-        <Button text="Опыт работы" link="#experience" />
+        <Button text="Опыт работы" link="#experience" onClick={test}/>
       </motion.div>
     </div>
   );
