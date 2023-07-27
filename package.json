@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "watch": "next watch",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,6 +13,7 @@
     "@types/node": "20.4.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
+    "cli": "^1.0.1",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.9",
     "framer-motion": "^10.12.18",
@@ -20,6 +22,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
+    "react-router-dom": "^6.14.2",
     "sass": "^1.63.6",
     "typescript": "5.1.6"
   }

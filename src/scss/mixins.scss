@@ -21,6 +21,12 @@
       @content;
     }
   }
+
+  @mixin fix-mobile {
+    @media (min-width: 0) and (max-width: 600px) {
+      @content;
+    }
+  }
   
   @mixin adaptiv-value($property, $startSize, $minSize, $type) {
       $addSize: $startSize - $minSize;

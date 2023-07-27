@@ -8,10 +8,10 @@ type linkProps = {
     target: string;
 }
 
-const Link: FC<linkProps> = ({ children, href, text, target }) => {
+const LinkUi: FC<linkProps> = ({ children, href, text, target }) => {
   return (
         <a href={href} className={style.link}>{text}</a>
   )
 }
 
-export default Link
+export default LinkUi

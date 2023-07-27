@@ -9,6 +9,7 @@
     --light-slate: #ccd6f6;
     --lightest-slate: #a8b2d1;
     --theme-color: #9d00ff;
+    --button-color: rgb(232, 53, 211);
 
     --tsm: 13px;
     --tsm1: 14px;
@@ -21,9 +22,4 @@
     --tgiant: clamp(40px, 8vw, 80px);
 }
 
-$maxWidth: 1440;
-$maxWidthContainer: 1200;
-$desktop-screen: 1440px;
-$tablet-screen: 1024px;
-$medium-screen: 768px;
-$mobile-screen: 320px;
+

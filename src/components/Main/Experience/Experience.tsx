@@ -1,15 +1,16 @@
 import React, { FC, useEffect, useRef, useState, RefObject } from "react";
 
 import style from "./experience.module.scss";
-import Link from "@/shared/ui/link/Link";
+import Link from "@/shared/ui/link/LinkUi";
+import { motion } from "framer-motion";
 
 type IExp = {
-    name: string;
-    role: string;
-    url: string;
-    start: string;
-    end: string;
-    shortDescription: string[];
+  name: string;
+  role: string;
+  url: string;
+  start: string;
+  end: string;
+  shortDescription: string[];
 };
 
 const experienceList: IExp[] = [
@@ -52,21 +53,30 @@ const experienceList: IExp[] = [
 const Experience: FC = () => {
   const [selected, setSelected] = useState(0);
 
-  let underline = useRef() as RefObject<
-    HTMLDivElement
-  > | null;
+  let underline = useRef() as RefObject<HTMLDivElement> | null;
 
   useEffect(() => {
     const transformSelected = () => {
-        if (underline !== null && underline.current !== null) {
-          underline!.current.style.top = `${selected * 2.5}rem`
-        }
-    }
+      if (underline !== null && underline.current !== null) {
+        underline!.current.style.top = `${selected * 2.5}rem`;
+      }
+    };
     transformSelected();
-  },[selected])
+  }, [selected]);
 
   return (
-    <div className={style.experience} id="experience">
+    <motion.div
+      className={style.experience}
+      id="experience"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      variants={{
+        visible: { opacity: 1, y: -100 },
+        hidden: { opacity: 0, y: 0 },
+      }}
+    >
       <div className={style.experience__title}>
         <h2>Опыт работы 6 мес.</h2>
       </div>
@@ -103,21 +113,21 @@ const Experience: FC = () => {
               </span>
             </h3>
             <p className={style.experience__details__range}>
-            {experienceList[selected].start} - {experienceList[selected].end}
+              {experienceList[selected].start} - {experienceList[selected].end}
             </p>
             <ul className={style.experience__details__list}>
-            {
-                experienceList[selected].shortDescription.map((description, index) => (
-                    <li key={index} className={style.experience__details__item}>
-                        {description}
-                    </li>
-                ))
-            }
+              {experienceList[selected].shortDescription.map(
+                (description, index) => (
+                  <li key={index} className={style.experience__details__item}>
+                    {description}
+                  </li>
+                ),
+              )}
             </ul>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

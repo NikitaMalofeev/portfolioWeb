@@ -1,0 +1,122 @@
+@import "../../../scss/mixins.scss";
+@import "../../../scss/_global_variables.scss";
+
+.burger {
+    &__container {
+        display: none;
+        min-width: 100px;
+        z-index: 20;
+    }
+
+    &__button {
+        position: absolute;
+        right: 160px;
+        top: -8px;
+        margin: auto 0;
+        min-width: 40px;
+        min-height: 40px;
+        z-index: 50;
+        background: var(--dark-navy);
+    }
+
+    &__string {
+        display: block;
+        margin-top: -1px;
+        margin-left: 1px;
+        max-width: 35px;
+        min-height: 5px;
+        background-color: var(--theme-color);
+
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+
+        &:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: 1px;
+            max-width: 35px;
+            width: 100%;
+            min-height: 5px;
+            background-color: var(--theme-color);
+
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
+        }
+        &:after {
+            content: " ";
+            top: 29px;
+            display: block;
+            position: absolute;
+            min-width: 35px;
+            min-height: 5px;
+            background-color: var(--theme-color);
+
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
+        }
+    }
+
+    &__button_open span {
+        visibility: hidden;
+
+        &:before {
+            visibility: visible;
+            top: 16px;
+            transition: all 0.3s ease 0.2s;
+            transform: rotate(45deg);
+        }
+        &:after {
+            top: 16px;
+            visibility: visible;
+            transition: all 0.3s ease 0.2s;
+            transform: rotate(-45deg);
+        }
+    }
+}
+@include medium {
+    .burger {
+        &__container {
+            display: block;
+            position: fixed;
+            top: 45px;
+            right: -99px;
+        }
+
+        &__nav {
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            top: 55px;
+            z-index: 2;
+        }
+    }
+}
+
+@include mobile {
+    .burger {
+        &__container {
+            display: block;
+            flex-direction: column;
+        }
+
+        &__button {
+            display: block;
+            position: fixed;
+            top: 36px;
+            right: 82px;
+        }
+    }
+}
+
+@include fix-mobile {
+    .burger {
+        &__button {
+            right: 15px;
+        }
+    }
+}

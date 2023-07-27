@@ -1,0 +1,19 @@
+#Logo {
+    color:var(--theme-color);
+    fill: none;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 90vh;
+
+    svg {
+        color: var(--theme-color);
+        fill: none;
+        height: 10rem !important;
+        width: 10rem !important;
+    }
+}

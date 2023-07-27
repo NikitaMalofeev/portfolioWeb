@@ -1,11 +1,16 @@
 import React, {FC} from 'react'
-import style from "./main.module.scss"
 
 import SocialIcons from '@/components/Main/SocialIcons/SocialIcons'
 import Email from '@/components/Main/Email/Email'
 import Hero from '@/components/Main/Hero/Hero'
 import About from '@/components/Main/About/About'
 import Experience from '@/components/Main/Experience/Experience'
+import Projects from '@/components/Main/Projects/Projects'
+import OtherProjects from '@/components/Main/OtherProjecs/OtherProjects'
+import Contact from '@/components/Main/Contact/Contact'
+
+import style from "./main.module.scss"
+
 
 const Main: FC = () => {
   return (
@@ -15,7 +20,9 @@ const Main: FC = () => {
         <Hero />
         <About />
         <Experience />
-        {/* добавить раздел - код которым я горжусь */}
+        <Projects />
+        <OtherProjects />
+        <Contact />
     </div>
   )
 }

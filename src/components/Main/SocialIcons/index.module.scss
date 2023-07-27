@@ -1,3 +1,6 @@
+@import "../../../scss/_global_variables.scss";
+@import "../../../scss/mixins.scss";
+
 .social {
     position: fixed;
     bottom: 50px;
@@ -45,5 +48,11 @@
             transform: translateY(-4px);
             color: var(--theme-color);
         }
+    }
+}
+
+@include mobile {
+    .social {
+        display: none;
     }
 }

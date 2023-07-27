@@ -1,12 +1,24 @@
 import React, { FC } from "react";
 
 import style from "./about.module.scss";
-import Link from "@/shared/ui/link/Link";
+import Link from "@/shared/ui/link/LinkUi";
+import {motion} from "framer-motion";
 import Image from "next/image";
 
 const About: FC = () => {
   return (
-    <div className={style.about} id={"about"}>
+    <motion.div 
+    className={style.about} 
+    id={"about"}
+    initial='hidden'
+    whileInView='visible'
+    viewport={{once: true}}
+    transition={{duration: 0.8}}
+    variants={{
+      visible: { opacity: 1, y: -100 },
+      hidden: { opacity: 0, y: 0 },
+    }}
+    >
       <div className={style.about__title}>
         <h2>Обо мне</h2>
       </div>
@@ -27,7 +39,7 @@ const About: FC = () => {
             <Link text={"cтартапе"} href="https://chosy.ru/" target="_blank">
             </Link>
             . Оттачиваю свои навыки разработки интерфейсов, с готовностью берясь
-            за новые интересные проекты, всегда стремясь быстро учиться и
+            за новые интересные задачи, всегда стремясь быстро учиться и
             адаптироваться.
           </p>
           <p className={style.about__grid__text}>
@@ -65,7 +77,7 @@ const About: FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

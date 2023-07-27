@@ -1,18 +1,20 @@
-
+@import "../../../scss/_global_variables.scss";
+@import "../../../scss/mixins.scss";
 
 .hero {
-    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
     justify-content: center;
+    max-width: $maxWidthContainer +px;
     min-height: 60vh;
-    padding-left: 150px;
+    padding: 0 150px;
+    margin-top: 4rem;
 
     &__title {
         color: var(--theme-color);
-        font-size: var(--tlarge);
+        font-size: var(--txlarge);
         font-family: var(--fira-code);
         font-weight: 600;
     }
@@ -29,10 +31,17 @@
     &__text{
         color: var(--slate);
         margin-right: 40%;
+        padding-bottom: 20px;
         font-size: var(--tlarge);
         letter-spacing: 0.07rem;
         line-height: 1.6rem;
         font-weight: 600;
         font-family: var(--raleway);
+    }
+}
+
+@include mobile {
+    .hero {
+        padding: 0 15px;
     }
 }

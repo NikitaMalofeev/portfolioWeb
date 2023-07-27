@@ -1,3 +1,6 @@
+@import "../../../scss/_global_variables.scss";
+@import "../../../scss/mixins.scss";
+
 .email {
     position: fixed;
     bottom: 0;
@@ -32,5 +35,11 @@
         &:focus {
             outline-color: var(--theme-color);
         }
+    }
+}
+
+@include mobile {
+    .email {
+        display: none;  
     }
 }
