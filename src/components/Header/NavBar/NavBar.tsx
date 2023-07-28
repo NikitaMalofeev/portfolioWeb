@@ -58,7 +58,7 @@ const NavBar: FC = () => {
         </motion.div>
         <div className={style.navigation__burger}></div>
         <div className={style.navigation__menu}>
-          <ul className={style.navigation__list} onClick={test}>
+          <ul className={`${ burgerNavVisible === false ? style.navigation__list : ""} ${ navbarVisible ? style.navigation__list_open : ""}`} onClick={test}>
             {menu.map((item, index) => (
               <motion.li
                 key={item.name}

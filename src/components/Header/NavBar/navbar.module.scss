@@ -114,7 +114,22 @@
             z-index: 100;
         }
         &__menu {
+            display: grid;
+            z-index: 300;
+        }
+        &__list {
             display: none;
+            position: fixed;
+            left: 93px;
+            top: 28px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2,  40px);
+            gap: 1px;
+            z-index: 300;
+        }
+        &__list_open {
+            display: grid;
+            left: 90px;
         }
         &__button {
             display: none;
@@ -135,6 +150,14 @@
         &__wrapper {
             padding: 0 15px;
             z-index: 120;
+        }
+    }
+}
+
+@media (min-width: 420px) {
+    .navigation {
+        &__list {
+            left: 64px;
         }
     }
 }

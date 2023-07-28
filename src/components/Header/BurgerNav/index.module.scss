@@ -121,18 +121,24 @@
             display: none;
         }
         &__button {
-            display: block;
+            display: none;
         }
 
         &__menu {
-            flex-direction: row;
+            display: grid;
+            gap: 15px;
             position: fixed;
             top: 16px;
             left: 154px;
             z-index: 100;
         }
         &__list {
-            flex-direction: column;
+            display: grid;
+            gap: 5px;
+            padding-top: 12px;
+            padding-left: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 40px);
             z-index: 100;
 
             &__item {
@@ -152,6 +158,14 @@
         }
         &__button {
             margin-left: -10px;
+        }
+    }
+}
+
+@media (min-width: 420px) {
+    .navigation {
+        &__list {
+            padding-left: 0;
         }
     }
 }

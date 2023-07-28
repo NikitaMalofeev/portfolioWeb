@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useRef, useState, RefObject } from "react";
 
 import style from "./experience.module.scss";
-import Link from "next/link";
+import Link from "@/shared/ui/link/LinkUi";
 import { motion } from "framer-motion";
 
 type IExp = {
@@ -104,6 +104,7 @@ const Experience: FC = () => {
               <span className={style.experience__details__position__company}>
                 &nbsp;@&nbsp;
                 <Link
+                  text={experienceList[selected].name}
                   href={experienceList[selected].url}
                   target={"_blank"}
                 >
