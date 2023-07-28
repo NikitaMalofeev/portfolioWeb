@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useRef, useState, RefObject } from "react";
 
 import style from "./experience.module.scss";
-import Link from "@/shared/ui/link/LinkUi";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 type IExp = {
@@ -106,7 +106,6 @@ const Experience: FC = () => {
                 <Link
                   href={experienceList[selected].url}
                   target={"_blank"}
-                  text={experienceList[selected].name}
                 >
                   {experienceList[selected].name}
                 </Link>
