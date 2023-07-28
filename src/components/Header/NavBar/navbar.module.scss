@@ -129,7 +129,8 @@
         }
         &__list_open {
             display: grid;
-            left: 90px;
+            
+            @include adaptiv-value("left", 90, 10, 1);
         }
         &__button {
             display: none;
