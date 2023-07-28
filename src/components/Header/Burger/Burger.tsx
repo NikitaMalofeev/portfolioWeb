@@ -27,6 +27,7 @@ const Burger = ({ isChange }: IProps) => {
       <motion.div
         className={style.burger__button + " " + burgerOpenClass}
         onClick={handleClick}
+        onTouchStart={handleClick}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
