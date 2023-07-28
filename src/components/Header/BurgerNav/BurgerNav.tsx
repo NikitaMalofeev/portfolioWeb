@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import style from "../burgerNav/burgerNav.module.scss";
+import style from "./index.module.scss";
 import Button from "@/shared/ui/button/Button";
 import Link from "next/link";
 import Logo from "../Logotype/Logo";
