@@ -1,4 +1,6 @@
 import React, { FC } from 'react'
+
+import Link from "next/link"
 import style from "./link.module.scss"
 
 type linkProps = {
@@ -8,9 +10,9 @@ type linkProps = {
     target: string;
 }
 
-const LinkUi: FC<linkProps> = ({ children, href, text, target }) => {
+const LinkUi: FC<linkProps> = ({ href, text, target }) => {
   return (
-        <a href={href} className={style.link}>{text}</a>
+        <Link href={href} className={style.link}>{text}</Link>
   )
 }
 
