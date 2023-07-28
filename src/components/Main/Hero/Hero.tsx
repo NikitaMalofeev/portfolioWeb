@@ -6,10 +6,9 @@ import Button from "@/shared/ui/button/Button";
 import { motion } from "framer-motion";
 
 const Hero: FC = () => {
-
-const test = () => {
-  console.log("test");
-}
+  const test = () => {
+    console.log("test");
+  };
 
   return (
     <div className={style.hero}>
@@ -76,7 +75,23 @@ const test = () => {
           delay: 1.65,
         }}
       >
-        <Button text="Опыт работы" link="#experience" onClick={test}/>
+        <Button text="Опыт работы" link="#experience" onClick={test} />
+      </motion.div>
+      <motion.div
+        className={style.hero__recomendation}
+        initial={{ opacity: 0, y: -25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.4,
+          ease: "easeInOut",
+          delay: 1.85,
+        }}
+      >
+        <img src="./skillfactory.png" alt="" />
+        <img src="./chosyIcon.ico" alt="" />
+        <p className={style.hero__recomendation__text}>
+          Этот кандидат рекомендован компаниями Сhosy и SkillFactory🏆
+        </p>
       </motion.div>
     </div>
   );

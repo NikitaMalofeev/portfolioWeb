@@ -29,6 +29,7 @@
         font-family: var(--raleway);
     }
     &__text{
+        position: relative;
         color: var(--slate);
         margin-right: 40%;
         padding-bottom: 20px;
@@ -37,6 +38,35 @@
         line-height: 1.6rem;
         font-weight: 600;
         font-family: var(--raleway);
+    }
+    &__recomendation {
+        padding-top: 50px;
+
+        &__text {
+            color: var(--slate);
+            font-size: var(--tlarge);
+            letter-spacing: 0.07rem;
+            line-height: 1.6rem;
+            font-weight: 600;
+            font-family: var(--raleway);
+        }
+        img {
+            max-width: 60px;
+            object-fit: cover;
+            padding: 3px;
+            margin-right: 20px;
+            min-width: 60px;
+            min-height: 60px;
+            max-height: 60px;
+            border-radius: 50%;
+            border: 5px var(--lightest-slate) solid;
+
+            :not(:first-child) {
+                padding-left: 50px;
+                
+               
+            }
+        }
     }
 }
 
