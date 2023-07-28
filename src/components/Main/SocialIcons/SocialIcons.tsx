@@ -41,7 +41,7 @@ const socialLinks: IIcons[] = [
   },
 ];
 
-const SocialIcons: FC<IIcons> = ({ index }) => {
+const SocialIcons: FC = () => {
   return (
     <motion.div
       className={style.social}
