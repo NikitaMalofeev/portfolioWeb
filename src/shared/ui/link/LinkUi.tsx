@@ -4,7 +4,6 @@ import Link from "next/link"
 import style from "./link.module.scss"
 
 type linkProps = {
-    children: any;
     text: string;
     href: string;
     target: string;
