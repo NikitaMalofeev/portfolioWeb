@@ -118,6 +118,7 @@
     .burger {
         &__button {
             right: 15px;
+            z-index: 101;
         }
     }
 }
