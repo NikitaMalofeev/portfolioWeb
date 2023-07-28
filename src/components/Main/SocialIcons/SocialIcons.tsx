@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import Link from "next/link";
 
-import { FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
-import { LiaTelegramPlane } from "react-icons/Lia";
+import { FiGithub, FiInstagram, FiLinkedin, FiPhoneCall } from "react-icons/fi";
 
 import style from "./index.module.scss";
 import { IconType } from "react-icons";
@@ -37,8 +36,8 @@ const socialLinks: IIcons[] = [
   {
     index: 3,
     name: "Telegram",
-    icon: <LiaTelegramPlane />,
-    link: "http://localhost3000",
+    icon: <FiPhoneCall />,
+    link: "tel:+77476141380",
   },
 ];
 
