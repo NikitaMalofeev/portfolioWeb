@@ -2,22 +2,37 @@ import React, { FC } from "react";
 
 import style from "./about.module.scss";
 import Link from "@/shared/ui/link/LinkUi";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
+
+const lastTechnology = [
+  { name: "React" },
+  { name: "SASS" },
+  { name: "FMAnimation" },
+  { name: "Node.js" },
+  { name: "Redux" },
+  { name: "TypeScript" },
+  { name: "Git flow" },
+  { name: "Js ES6" },
+  { name: "BEM" },
+  { name: "Figma" },
+  { name: "CI/CD, OpenSSH" },
+  { name: "REST API, openapi" },
+];
 
 const About: FC = () => {
   return (
-    <motion.div 
-    className={style.about} 
-    id={"about"}
-    initial='hidden'
-    whileInView='visible'
-    viewport={{once: true}}
-    transition={{duration: 0.8}}
-    variants={{
-      visible: { opacity: 1, y: -100 },
-      hidden: { opacity: 0, y: 0 },
-    }}
+    <motion.div
+      className={style.about}
+      id={"about"}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      variants={{
+        visible: { opacity: 1, y: -100 },
+        hidden: { opacity: 0, y: 0 },
+      }}
     >
       <div className={style.about__title}>
         <h2>Обо мне</h2>
@@ -32,12 +47,17 @@ const About: FC = () => {
           </p>
           <p className={style.about__grid__text}>
             Сейчас получаю коммерческий опыт в &nbsp;
-            <Link text ={"благотворительном проекте"} href="https://guild-of-developers.ru/" target="_blank">
-              
-            </Link> &nbsp;
-            и HR tech &nbsp;
-            <Link text={"cтартапе"} href="https://chosy.ru/" target="_blank">
-            </Link>
+            <Link
+              text={"благотворительном проекте"}
+              href="https://guild-of-developers.ru/"
+              target="_blank"
+            ></Link>{" "}
+            &nbsp; и HR tech &nbsp;
+            <Link
+              text={"cтартапе"}
+              href="https://chosy.ru/"
+              target="_blank"
+            ></Link>
             . Оттачиваю свои навыки разработки интерфейсов, с готовностью берясь
             за новые интересные задачи, всегда стремясь быстро учиться и
             адаптироваться.
@@ -55,18 +75,13 @@ const About: FC = () => {
             Технологии которые я использовал в последних проектах
           </p>
           <ul className={style.about__grid__list}>
-            <li className={style.about__grid__skill}>React</li>
-            <li className={style.about__grid__skill}>TypeScript</li>
-            <li className={style.about__grid__skill}>Redux</li>
-            <li className={style.about__grid__skill}>Node.js</li>
-            <li className={style.about__grid__skill}>FMAnimation</li>
-            <li className={style.about__grid__skill}>SASS</li>
-            <li className={style.about__grid__skill}>Git flow</li>
-            <li className={style.about__grid__skill}>Js ES6</li>
-            <li className={style.about__grid__skill}>BEM</li>
-            <li className={style.about__grid__skill}>Figma</li>
-            <li className={style.about__grid__skill}>CI/CD</li>
-            <li className={style.about__grid__skill}>REST API, openapi</li>
+            {lastTechnology.map((name, index) => {
+              return (
+                <li key={index} className={style.about__grid__skill}>
+                  {name.name}
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className={style.about__grid__photo}>

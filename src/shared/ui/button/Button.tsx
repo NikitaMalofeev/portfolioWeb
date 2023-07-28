@@ -14,7 +14,13 @@ const Button: FC<IButton> = ({
   link,
   onClick,
 }) => {
-  return <Link href={link} className={style.button} onClick={onClick}>{text}</Link>;
+  return (
+    <div className={style.button__container}>
+      <Link href={link} className={style.button} onClick={onClick}>{text}</Link>
+     
+    </div>
+  )
+  
 }
 
 export default Button;

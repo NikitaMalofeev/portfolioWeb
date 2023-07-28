@@ -31,7 +31,7 @@ const Contact: FC = () => {
         привнесу эти навыки в ваш проект, предлагая эффективные решения.
       </p>
       <div className={style.contact__cta}>
-        <Button text="Match" link="" onClick={test}/>
+        <Button text="Match" link="https://t.me/HG1nv" onClick={test}/>
       </div>
     </motion.div>
   );

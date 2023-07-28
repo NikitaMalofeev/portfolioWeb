@@ -61,6 +61,11 @@
             grid-template-columns: repeat(3, 1fr);
             list-style-type: none;
             padding: 0 3rem;
+
+            li {
+                text-decoration: none;
+                color: var(--theme-color);
+            }
         }
         &__skill {
             font-family: var(--raleway);
