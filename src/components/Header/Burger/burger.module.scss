@@ -5,7 +5,7 @@
     &__container {
         display: none;
         min-width: 100px;
-        z-index: 20;
+        z-index: 1000;
     }
 
     &__button {
@@ -102,6 +102,7 @@
         &__container {
             display: block;
             flex-direction: column;
+            position: relative;
         }
 
         &__button {
