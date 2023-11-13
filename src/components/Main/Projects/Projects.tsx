@@ -46,6 +46,29 @@ const Projects: FC = () => {
       projectMore: "",
     },
     {
+      image: "/UserResearch.png",
+      isCommercial: true,
+      overline: "Коммерческий проект",
+      projectName: "CustInsights",
+      projectLink: "https://custinsights.tilda.ws/",
+      projectDescription:
+        "Веб-приложение для анкетирования ЦА для различных компаний. Я спроектировал архитектуру, написал библиотеку кастомных компонентов и интегрировал ее в конструктор форм работающий с REST api сервером",
+      projectTech: [
+        "React",
+        "Redux",
+        "Rest api",
+        "Typescript",
+        "MaterialUi",
+        "Formik",
+        "Ci/Cd",
+      ],
+      projectExternalLinks: {
+        github: "",
+        externalLink: "https://custinsights.tilda.ws/",
+      },
+      projectMore: "",
+    },
+    {
       image: "/projects3.png",
       isCommercial: false,
       overline: "Учебный проект",
@@ -63,12 +86,27 @@ const Projects: FC = () => {
       image: "/projects4.png",
       isCommercial: false,
       overline: "Учебный проект",
-      projectName: "Hardware-store",
-      projectLink: "https://github.com/NikitaMalofeev/Design-Studio",
-      projectDescription: "Одна из первых работ в 2022 с практикой HTML CSS",
-      projectTech: ["HTML", "JS", "CSS"],
+      projectName: "MongoDb_CRUD_Actions",
+      projectLink: "https://nextjs-server-actions-nine.vercel.app",
+      projectDescription:
+        "В этом проекте я реализовал CRUD actions используя next, js, mongoDB",
+      projectTech: ["Next.js, React, MongoDB, fetch"],
       projectExternalLinks: {
-        github: "https://github.com/NikitaMalofeev/Hardware_store",
+        github: "https://github.com/NikitaMalofeev/MongoDB_CRUD_actions",
+        externalLink: "https://nextjs-server-actions-nine.vercel.app",
+      },
+    },
+    {
+      image: "/projects5.png",
+      isCommercial: false,
+      overline: "Учебный проект",
+      projectName: "Synclock",
+      projectLink: "",
+      projectDescription:
+        "Полностью интерактивный event календарь, копия google календаря",
+      projectTech: ["React, context, tailwind"],
+      projectExternalLinks: {
+        github: "https://github.com/NikitaMalofeev/ClockSync",
         externalLink: "",
       },
     },
@@ -98,6 +136,7 @@ const Projects: FC = () => {
           hidden: { opacity: 0, y: 0 },
         }}
       >
+        <div className={style.projects__fixscroll}></div>
         <h2>Несколько моих проектов</h2>
       </motion.div>
       <div className={style.projects__container}>

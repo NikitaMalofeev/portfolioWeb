@@ -74,6 +74,16 @@ const OtherProjects: FC = () => {
       projectTech: ["HTML", "CSS", "JS"],
     },
     {
+      projectName: "Hardware-store",
+      projectExternalLinks: {
+        folder: "",
+        github: "https://github.com/NikitaMalofeev/Design-Studio",
+        externalLink: "",
+      },
+      projectDescription: "Одна из первых работ в 2022 с практикой HTML CSS ",
+      projectTech: ["HTML", "CSS", "JS"],
+    },
+    {
       projectName: "YouTalk",
       projectExternalLinks: {
         folder: "",

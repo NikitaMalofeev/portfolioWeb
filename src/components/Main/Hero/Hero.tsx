@@ -75,7 +75,7 @@ const Hero: FC = () => {
           delay: 1.65,
         }}
       >
-        <Button text="Опыт работы" link="#experience" onClick={test} />
+        <Button text="Сразу узнать об актульном опыте" link="#experience" onClick={test} />
       </motion.div>
       <motion.div
         className={style.hero__recomendation}
