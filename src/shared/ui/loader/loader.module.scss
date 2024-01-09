@@ -1,5 +1,5 @@
 #Logo {
-    color:var(--theme-color);
+    color: var(--theme-color);
     fill: none;
 }
 
@@ -30,7 +30,17 @@
     font-size: var(--tsm);
     outline: none;
 
-    &:hover,&:focus {
+    &:hover,
+    &:focus {
         background-color: var(--lightest-navy);
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        display: flex;
+    }
+    100% {
+        display: none;
     }
 }

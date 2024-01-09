@@ -22,11 +22,9 @@ function Index() {
         <>
           <Header />
           <Main />
-          <More />
         </>
       )}
-      <Loader isLoading={isLoading} setIsLoading={handleLoaderLoaded}/>
-      
+      <Loader isLoading={isLoading} setIsLoading={handleLoaderLoaded} />
     </div>
   );
 }

@@ -7,6 +7,7 @@
   max-width: $maxWidthContainer + px;
 
   &__fixscroll {
+    margin-top: 100px;
     min-height: 240px;
   }
   &__title {
@@ -141,7 +142,7 @@
         list-style-type: none;
         display: flex;
         gap: 1rem;
-        
+
         &__item {
           transition: 0.3s ease-in-out;
           display: flex;

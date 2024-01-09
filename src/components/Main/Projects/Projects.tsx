@@ -31,6 +31,21 @@ const Projects: FC = () => {
       projectMore: "",
     },
     {
+      image: "/calipso.jpg",
+      isCommercial: true,
+      overline: "Коммерческий проект",
+      projectName: "Calipso market",
+      projectLink: "https://calipso.shakeshev.com/",
+      projectDescription:
+        "Веб-приложение для заказа воды, работа велась 10 дней. За это время написал библиотеку кастомных компонентов, создал несколько динамичных, вложенных форм для регистраци, доставки и авторизации, все это прокинул через redux store. Создал несколько классных переиспользуемых компонентов(#модальное окно с 3-мя анимациями и 7 видами контента в 1 компоненте), сверстал 6 разных страниц и многое другое.",
+      projectTech: ["React", "Redux", "Formik", "Typescript", "scss"],
+      projectExternalLinks: {
+        github: "https://github.com/NikitaMalofeev/calipso",
+        externalLink: "https://calipso.shakeshev.com/",
+      },
+      projectMore: "https://calipso.shakeshev.com/",
+    },
+    {
       image: "/fonds.png",
       isCommercial: true,
       overline: "Коммерческий проект",
@@ -44,6 +59,28 @@ const Projects: FC = () => {
         externalLink: "",
       },
       projectMore: "",
+    },
+    {
+      image: "/SeeSkills.jpg",
+      isCommercial: false,
+      overline: "Учебный проект",
+      projectName: "See my Skill",
+      projectLink: "https://github.com/NikitaMalofeev/React-See-my-Skill",
+      projectDescription:
+        "Квинтессенция моих знаний, в этом проекте представлена темизация, интернационализация, передовой подход к написанию модульной системы (FSD) и переиспользуемых компонентов, широкое использование возможностей redux, typescript, сделана легко расширяемая сборка webpack, настроено интеграционное, unit, e2e и регрессионное тестирование, различная работа с данными",
+      projectTech: [
+        "React",
+        "TypeScript",
+        "SCSS",
+        "storybook",
+        "jest",
+        "Redux",
+      ],
+      projectExternalLinks: {
+        github: "https://github.com/NikitaMalofeev/React-See-my-Skill",
+        externalLink: "https://github.com/NikitaMalofeev/React-See-my-Skill",
+      },
+      projectMore: "https://github.com/NikitaMalofeev/React-See-my-Skill",
     },
     {
       image: "/UserResearch.png",
