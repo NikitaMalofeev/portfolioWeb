@@ -106,7 +106,7 @@ const Experience: FC = () => {
         hidden: { opacity: 0, y: 0 },
       }}
     >
-      <div className={style.experience__fixscroll}></div>
+      {/* <div className={style.experience__fixscroll}></div> */}
       <div className={style.experience__title}>
         <h2>Опыт работы 1 год 5 месяцев</h2>
       </div>

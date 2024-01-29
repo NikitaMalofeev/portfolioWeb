@@ -7,7 +7,7 @@
     align-items: flex-start;
     gap: 1rem;
     justify-content: center;
-    max-width: $maxWidthContainer +px;
+    max-width: $maxWidthContainer + px;
     min-height: 60vh;
     padding: 0 150px;
     margin-top: 4rem;
@@ -28,7 +28,7 @@
         color: var(--lightest-slate);
         font-family: var(--raleway);
     }
-    &__text{
+    &__text {
         position: relative;
         color: var(--slate);
         margin-right: 40%;
@@ -63,13 +63,32 @@
 
             :not(:first-child) {
                 padding-left: 50px;
-                
-               
             }
         }
     }
 }
 
+.hero__recommended {
+    width: 150px;
+    height: 1000px;
+
+    img {
+        max-width: 80vw;
+        width: 75vw;
+        max-height: 1000px;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    &_button {
+        margin: 20px 0;
+        border: none;
+        color: var(--theme-color);
+        font-size: 20px;
+        background: none;
+        cursor: pointer;
+    }
+}
 @include mobile {
     .hero {
         padding: 0 15px;

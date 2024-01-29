@@ -1,13 +1,11 @@
 import React, { FC, useEffect, useState } from "react";
 import Link from "next/link";
-
-import { GiHamburgerMenu } from "react-icons/gi";
-import { CgClose } from "react-icons/cg";
 import style from "./navbar.module.scss";
 import Logo from "@/components/Header/Logotype/Logo";
 import Button from "@/shared/ui/button/Button";
 import Burger from "../Burger/Burger";
 import { motion } from "framer-motion";
+import { ThemeSwitcher } from "@/shared/ui/ThemeSwitcher/ThemeSwitcher";
 
 type IMenu = {
   name: string;
@@ -56,9 +54,15 @@ const NavBar: FC = () => {
             <Logo />
           </Link>
         </motion.div>
+        <ThemeSwitcher className={style.navigation__switcher} />
         <div className={style.navigation__burger}></div>
         <div className={style.navigation__menu}>
-          <ul className={`${ burgerNavVisible === false ? style.navigation__list : ""} ${ navbarVisible ? style.navigation__list_open : ""}`} onClick={test}>
+          <ul
+            className={`${
+              burgerNavVisible === false ? style.navigation__list : ""
+            } ${navbarVisible ? style.navigation__list_open : ""}`}
+            onClick={test}
+          >
             {menu.map((item, index) => (
               <motion.li
                 key={item.name}
@@ -87,7 +91,11 @@ const NavBar: FC = () => {
               delay: 0.6,
             }}
           >
-            <Button text="Resume" link="http://localhost:3000/resume.pdf" onClick={test} />
+            <Button
+              text="Resume"
+              link="http://localhost:3000/resume.pdf"
+              onClick={test}
+            />
           </motion.div>
         </div>
       </div>

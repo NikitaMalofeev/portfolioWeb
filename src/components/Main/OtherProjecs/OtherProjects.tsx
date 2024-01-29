@@ -12,20 +12,42 @@ const OtherProjects: FC = () => {
     {
       projectName: "BurgerAngularApp",
       projectExternalLinks: {
-        folder: "",
+        folder: "https://github.com/NikitaMalofeev/burgerAngularApp",
         github: "https://github.com/NikitaMalofeev/burgerAngularApp",
-        externalLink: "",
+        externalLink: "https://github.com/NikitaMalofeev/burgerAngularApp",
       },
       projectDescription:
         "Это небольшое приложение по доставке бургеров где представлен функционал изменения валюты, изменения цены на товары в меню, простая валидация формы, переход по разделам с помощью ссылок",
       projectTech: ["Angular", "Node.js", "CSS", "Typescript"],
     },
     {
+      projectName: "Advanced TODO",
+      projectExternalLinks: {
+        folder: "https://github.com/NikitaMalofeev/todo-advanced",
+        github: "https://github.com/NikitaMalofeev/todo-advanced",
+        externalLink: "https://github.com/NikitaMalofeev/todo-advanced",
+      },
+      projectDescription:
+        "Продвинутое todo, заметки сохраняются в redux и local хранилища, имеют возможность сортировки, переноса состояния",
+      projectTech: ["FSD", "React", "CSS", "Typescript"],
+    },
+    {
+      projectName: "Rick and Morty Api",
+      projectExternalLinks: {
+        folder: "https://github.com/NikitaMalofeev/RicAndMortyApi",
+        github: "https://github.com/NikitaMalofeev/RicAndMortyApi",
+        externalLink: "https://github.com/NikitaMalofeev/RicAndMortyApi",
+      },
+      projectDescription:
+        "Парсинг APi Rick and Morty, фильтрация по 3м разным типам, оптимизированная загрузка, FSD",
+      projectTech: ["FSD", "React", "SCSS", "Typescript"],
+    },
+    {
       projectName: "Pokemons",
       projectExternalLinks: {
-        folder: "",
+        folder: "https://github.com/NikitaMalofeev/pokemons",
         github: "https://github.com/NikitaMalofeev/pokemons",
-        externalLink: "",
+        externalLink: "https://github.com/NikitaMalofeev/pokemons",
       },
       projectDescription:
         "Тестовое задание на стажировке где я с помощью axios и TypeScript получал данные из openapi и парсил нажатую картинку в блок аватара с помощью работы с массивами данных",
@@ -34,9 +56,9 @@ const OtherProjects: FC = () => {
     {
       projectName: "ExpressServer",
       projectExternalLinks: {
-        folder: "",
+        folder: "https://github.com/NikitaMalofeev/express_server/",
         github: "https://github.com/NikitaMalofeev/express_server/",
-        externalLink: "",
+        externalLink: "https://github.com/NikitaMalofeev/express_server/",
       },
       projectDescription:
         "Небольшая страница где я практиковал клиент-серверное взаимодействие и node.js",
@@ -45,9 +67,9 @@ const OtherProjects: FC = () => {
     {
       projectName: "Restaurants",
       projectExternalLinks: {
-        folder: "",
+        folder: "https://github.com/NikitaMalofeev/restaurant_aggregator",
         github: "https://github.com/NikitaMalofeev/restaurant_aggregator",
-        externalLink: "",
+        externalLink: "https://github.com/NikitaMalofeev/restaurant_aggregator",
       },
       projectDescription:
         "Многостраничный, адаптивный сайт агрегатор ресторанов",
@@ -56,9 +78,9 @@ const OtherProjects: FC = () => {
     {
       projectName: "Design-studio",
       projectExternalLinks: {
-        folder: "",
+        folder: "https://github.com/NikitaMalofeev/Design-Studio",
         github: "https://github.com/NikitaMalofeev/Design-Studio",
-        externalLink: "",
+        externalLink: "https://github.com/NikitaMalofeev/Design-Studio",
       },
       projectDescription: "Большой лендинг студии дизайна",
       projectTech: ["HTML", "CSS", "JS"],
@@ -66,9 +88,9 @@ const OtherProjects: FC = () => {
     {
       projectName: "Minimal Blog",
       projectExternalLinks: {
-        folder: "",
+        folder: "https://github.com/NikitaMalofeev/Minimal_Blog_SF",
         github: "https://github.com/NikitaMalofeev/Minimal_Blog_SF",
-        externalLink: "",
+        externalLink: "https://github.com/NikitaMalofeev/Minimal_Blog_SF",
       },
       projectDescription: "Небольшой сайт, практика школы SF",
       projectTech: ["HTML", "CSS", "JS"],
@@ -76,9 +98,9 @@ const OtherProjects: FC = () => {
     {
       projectName: "Hardware-store",
       projectExternalLinks: {
-        folder: "",
+        folder: "https://github.com/NikitaMalofeev/Design-Studio",
         github: "https://github.com/NikitaMalofeev/Design-Studio",
-        externalLink: "",
+        externalLink: "https://github.com/NikitaMalofeev/Design-Studio",
       },
       projectDescription: "Одна из первых работ в 2022 с практикой HTML CSS ",
       projectTech: ["HTML", "CSS", "JS"],
@@ -101,7 +123,9 @@ const OtherProjects: FC = () => {
 
   const handleClick = () => {
     setNoOfProject(noOfProject + 3);
-    if (noOfProject >= otherProjectsData.length) setNoOfProject(3);
+    if (noOfProject >= otherProjectsData.length) {
+      setNoOfProject(3);
+    }
   };
 
   return (
@@ -170,7 +194,9 @@ const OtherProjects: FC = () => {
       </div>
       <div className={style.other__button}>
         <Button
-          text="Показать еще"
+          text={
+            noOfProject >= otherProjectsData.length ? "Скрыть" : "Показать еще"
+          }
           link="javascript:void(0);"
           onClick={handleClick}
         />

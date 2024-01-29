@@ -1,0 +1,104 @@
+@import "../../../scss/_global_variables.scss";
+@import "../../../scss/mixins.scss";
+
+.certificates {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 150px 150px;
+    max-height: max-content;
+    font-family: var(--raleway);
+    overflow: hidden;
+
+    &__head {
+        color: var(--lightest-slate);
+    }
+
+    &__overlay {
+        position: absolute;
+        height: 100%;
+        border-radius: 20px 0 20px 0;
+        background-color: white;
+    }
+
+    &__company {
+        overflow: hidden;
+        white-space: nowrap;
+        position: absolute;
+        top: 10%;
+        left: 21px;
+        font-size: 24px;
+        color: #0a192f;
+        display: inline-block;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+        width: 50px;
+        border-radius: 50%;
+        height: 50px;
+        background-color: white;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    &__content {
+        margin-left: 78px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    &__item {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        height: 297px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 25px;
+    }
+
+    &__course {
+        color: #0a192f;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__descr {
+        margin: 40px 0;
+    }
+}
+
+@include mobile {
+    .certificates {
+        padding: 0 15px;
+
+        &__item {
+            max-width: 350px;
+        }
+
+        &__certificate {
+            max-width: 250px;
+            height: 180px;
+            margin: 10px 0 10px 0;
+        }
+    }
+}

@@ -120,17 +120,17 @@ const Projects: FC = () => {
       },
     },
     {
-      image: "/projects4.png",
+      image: "/projects4.jpg",
       isCommercial: false,
       overline: "Учебный проект",
-      projectName: "MongoDb_CRUD_Actions",
-      projectLink: "https://nextjs-server-actions-nine.vercel.app",
+      projectName: "Fastarticle",
+      projectLink: "",
       projectDescription:
-        "В этом проекте я реализовал CRUD actions используя next, js, mongoDB",
-      projectTech: ["Next.js, React, MongoDB, fetch"],
+        "Мой первый коммерческий проект, студенты со всего СНГ смогут быстро получать материалы для своих курсовых из англоязычных статей",
+      projectTech: ["Next.js, React, Vite, AI, Google api, Ads"],
       projectExternalLinks: {
-        github: "https://github.com/NikitaMalofeev/MongoDB_CRUD_actions",
-        externalLink: "https://nextjs-server-actions-nine.vercel.app",
+        github: "https://github.com/NikitaMalofeev/Fastarticle",
+        externalLink: "",
       },
     },
     {

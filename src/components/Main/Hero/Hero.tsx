@@ -1,13 +1,18 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 import style from "./hero.module.scss";
 import Link from "next/link";
 import Button from "@/shared/ui/button/Button";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Hero: FC = () => {
+  const [recommended, setRecmended] = useState(false);
+  const handleRecommended = () => {
+    setRecmended((prev) => !prev);
+  };
   const test = () => {
-    console.log("test");
+    console.log("Переход к актуальному опыту");
   };
 
   return (
@@ -75,7 +80,11 @@ const Hero: FC = () => {
           delay: 1.65,
         }}
       >
-        <Button text="Сразу узнать об актульном опыте" link="#experience" onClick={test} />
+        <Button
+          text="Сразу узнать об актульном опыте"
+          link="#experience"
+          onClick={test}
+        />
       </motion.div>
       <motion.div
         className={style.hero__recomendation}
@@ -92,6 +101,23 @@ const Hero: FC = () => {
         <p className={style.hero__recomendation__text}>
           Этот кандидат рекомендован компаниями Сhosy и SkillFactory🏆
         </p>
+        <button
+          onClick={() => handleRecommended()}
+          className={style.hero__recommended_button}
+        >
+          Рекомендательное письмо (смотреть c десктопа)
+        </button>
+        {recommended && (
+          <div className={style.hero__recommended}>
+            <Image
+              className={style.hero__recommended_button}
+              width={400}
+              height={1000}
+              alt=""
+              src="/Recomended.png"
+            ></Image>
+          </div>
+        )}
       </motion.div>
     </div>
   );

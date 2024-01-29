@@ -3,12 +3,13 @@ import React, { useState } from "react";
 import Header from "@/sections/Header/Header";
 import Main from "@/sections/Main/Main";
 import Loader from "@/shared/ui/loader/Loader";
-import More from "@/shared/more/More";
-import { AnimatePresence } from "framer-motion";
+import { classNames } from "@/shared/helpers/ClassNames";
+import { useTheme } from "@/providers/ThemeProvider";
 
 function Index() {
   const [isLoading, setIsLoading] = useState(false);
   const [showContent, setShowContent] = useState(false);
+  const { theme } = useTheme();
 
   const handleLoaderLoaded = () => {
     setIsLoading(false);
@@ -17,7 +18,7 @@ function Index() {
     }, 500);
   };
   return (
-    <div className="app">
+    <div className={classNames("app", {}, [theme])}>
       {showContent && (
         <>
           <Header />

@@ -2,7 +2,7 @@
 @import "../../../scss/mixins.scss";
 
 .experience {
-    margin: 0 auto ;
+    margin: 200px auto;
     max-width: $maxWidthContainer + px;
     padding: 0 150px;
 
@@ -29,9 +29,9 @@
                 display: block;
                 position: absolute;
                 top: 20px;
-                left: 485px;
-                max-width: 300px;
+                max-width: 200px;
                 width: 100%;
+                margin-left: 550px;
                 background-color: var(--lightest-navy);
                 height: 2px;
             }
@@ -137,7 +137,7 @@
     .experience {
         padding: 0 0;
         padding-left: 15px;
-        margin: 0 auto;
+        margin: 200px auto 0;
 
         &__container {
             grid-template-columns: 1fr;
@@ -145,6 +145,18 @@
         &__slider {
             padding-bottom: 25px;
         }
+        &__title {
+            h2 {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .experience {
         &__title {
             h2 {
                 &::after {
